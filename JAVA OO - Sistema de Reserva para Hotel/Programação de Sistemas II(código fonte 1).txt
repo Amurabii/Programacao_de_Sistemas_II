@@ -77,7 +77,7 @@ public class Hotel {
 		double desconto = CalculoDiaria * 0.10; 
 		
 		if(quantidadeDeDiarias > 7) {
-		   System.out.println("Você tem um desconto de : R$" + desconto);	
+		   	System.out.println("Você tem um desconto de : R$" + desconto);	
 		}else {
 			System.out.println("Desculpe,você não tem descontos");
 		}
