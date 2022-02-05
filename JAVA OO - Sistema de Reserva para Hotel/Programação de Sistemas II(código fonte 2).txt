@@ -1,0 +1,30 @@
+package prog2;
+
+public class Hospede {
+	String nome;
+	String endereco;
+	int idade;
+	int limitehospede;
+	
+	public Hospede() {
+		
+	}
+	
+	public String nome(String nome) {
+		return nome;
+		
+	}
+
+	public String endereco(String endereco) {
+		return endereco;
+		
+	}
+	
+	public int idade(int idade) {
+		return idade;
+		
+	}
+
+	
+	
+}

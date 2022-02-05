@@ -1,0 +1,98 @@
+package prog2;
+
+import java.util.Scanner;
+
+public class Hotel {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		Suite s1 = new Suite();
+		s1.numeroSuite(24);
+		s1.tipo("Luxo");
+		s1.capacidadeDePessoas(2);
+		s1.valorDiaria(500);
+		s1.numero(2);
+		
+		Suite s2 = new Suite();
+		s2.numeroSuite(12);
+		s2.tipo("Basica");
+		s2.capacidadeDePessoas(4);
+		s2.valorDiaria(100);
+		s2.numero(1);
+
+
+		Hospede h1 = new Hospede();
+		h1.nome("Kara Danvers");
+		h1.endereco("National City");
+		h1.idade(24);
+		
+		Hospede h2 = new Hospede();
+		h2.nome("Clark Kent");
+		h2.endereco("Metrópolis");
+		h2.idade(34);
+		
+		
+		
+		System.out.println("Digite a quantidade de hóspedes: ");
+		int quantidadeReserva = sc.nextInt();
+		System.out.println("Digite a capacidade de hóspedes da suíte: ");
+		int capacidadeSuite = sc.nextInt();
+		
+		if (quantidadeReserva < capacidadeSuite) {
+			System.out.println("Pode alocar mais hóspedes ");
+		} else {
+			System.out.println("Não pode alocar mais hóspedes ");
+		}
+		
+		
+		
+		System.out.println();
+		System.out.println("Digite sua idade: ");  
+		int idade = sc.nextInt();
+		
+		if(idade <= 2 ) {
+			System.out.println("Não é preciso pagar");
+		}else {
+			System.out.println("Acima de 2 anos paga hospedagem");
+		}
+		
+		 
+		
+		System.out.println();
+		System.out.println("Digite o valor da diária da suíte:");
+		int valorDiaria = sc.nextInt();
+		System.out.println("Digite a quantidade de diárias solicitadas: ");
+		int quantidadeDeDiarias = sc.nextInt();
+		
+		
+		int CalculoDiaria = valorDiaria * quantidadeDeDiarias;
+		System.out.println("O valor das suas diárias será: R$" + CalculoDiaria);
+		
+		 
+		
+		System.out.println();
+		double desconto = CalculoDiaria * 0.10; 
+		
+		if(quantidadeDeDiarias > 7) {
+		   System.out.println("Você tem um desconto de : R$" + desconto);	
+		}else {
+			System.out.println("Desculpe,você não tem descontos");
+		}
+		 
+		
+		System.out.println();
+		double subtração =  CalculoDiaria - desconto;
+		if(quantidadeDeDiarias > 7) {
+			System.out.printf("Você só pagará: R$ %.2f" , subtração);
+		}else {
+			
+		}
+		
+		
+		sc.close();
+	}
+
+}
