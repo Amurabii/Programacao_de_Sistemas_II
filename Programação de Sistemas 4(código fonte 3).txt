@@ -1,9 +1,0 @@
-package prog2;
-
-public class Reserva {
-	int quantidadeDeDiarias;
-	int quantidadeReserva;
-	int tipoSuite;
-	int hospedeResponsavel;
-	
-}
